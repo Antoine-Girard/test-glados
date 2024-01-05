@@ -71,8 +71,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cabal build --only-dependencies --enable-tests --enable-benchmarks
-      - name: sudo apt-get update
+          sudo apt-get update
           sudo apt-get install -y libgmp-dev
           stack init
           stack setup
