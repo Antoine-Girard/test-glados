@@ -26,6 +26,7 @@ jobs:
         run: |
           sudo apt-get update
           cabal init
+          cabal update
           sudo apt-get install -y libgmp-dev
 
       - name: Build binary
