@@ -24,8 +24,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cabal update
-          cabal init
           sudo apt-get update
           sudo apt-get install -y libgmp-dev
 
@@ -65,6 +63,7 @@ jobs:
       - name: Install dependencies
         run: |
           cabal update
+          cabal init
           cabal build --only-dependencies --enable-tests --enable-benchmarks
       - name: Build
         run: cabal build --enable-tests --enable-benchmarks all
