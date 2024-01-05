@@ -25,6 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
+          cabal init
           sudo apt-get install -y libgmp-dev
 
       - name: Build binary
